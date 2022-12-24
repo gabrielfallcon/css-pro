@@ -4,7 +4,7 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Forms/Input";
 import { Counter } from "../../components/Counter";
 
-export default function PreInscricao() {
+const PreInscricao = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data: any) => console.log(data)
@@ -51,3 +51,5 @@ export default function PreInscricao() {
     </Main>
   )
 }
+
+export default PreInscricao;
