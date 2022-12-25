@@ -8,12 +8,9 @@ export const CounterBox = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 42px 89px;
-  
+  margin-bottom: 70px;
   position: relative;
   backdrop-filter: blur(50px);
-
-  /* border: 1px solid transparent; */
-  /* border-image: linear-gradient(to left, #00C2FF, #00FF0A); */
   border-image-slice: 1;
   border-image-width: 4px;
   

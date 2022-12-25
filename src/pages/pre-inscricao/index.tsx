@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Button } from "../../components/Button";
-import { Input } from "../../components/Forms/Input";
+import Input  from "../../components/Forms/Input";
 import { Counter } from "../../components/Counter";
 import api from "../../services/api";
 import clsx from 'clsx';
@@ -11,13 +11,7 @@ const PreInscricao = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data: any) => {
-    const dataInfo: any = {
-      email: 'gabriel.nascimenton@gmail.com',
-      name: 'Gabriel Nascimento',
-      phone: '11991280913'
-    }
-
-    await api.post('subscribe', dataInfo);
+    await api.post('subscribe', data);
   }
   return (
     <main className={styles.main}>
