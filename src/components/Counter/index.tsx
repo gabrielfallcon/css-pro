@@ -1,4 +1,4 @@
-import { CounterBox } from './styles';
+import styles from './styles.module.scss';
 
 
 export const Counter = () => {
@@ -8,14 +8,14 @@ export const Counter = () => {
   const hours = '20';
   const minute = '20';
   return (
-    <CounterBox>
+    <div className={styles.containerCounter}>
         <h2>
           <span>Prepare-se</span> para o melhor ano da sua carreira de dev front-end
         </h2>
 
-        <div className='timer'>
-          <div className='timer__item'>
-            <div className='box-number'>
+        <div className={styles.timer}>
+          <div className={styles.timerItem}>
+            <div className={styles.boxNumber}>
               <div>2</div>
               <div>0</div>
             </div>
@@ -23,8 +23,8 @@ export const Counter = () => {
             <span>Dias</span>
           </div>
 
-          <div className='timer__item'>
-            <div className='box-number'>
+          <div className={styles.timerItem}>
+            <div className={styles.boxNumber}>
               <div>2</div>
               <div>2</div>
             </div>
@@ -32,8 +32,8 @@ export const Counter = () => {
             <span>Horas</span>
           </div>
 
-          <div className='timer__item'>
-            <div className='box-number'>
+          <div className={styles.timerItem}>
+            <div className={styles.boxNumber}>
               <div>5</div>
               <div>6</div>
             </div>
@@ -41,6 +41,6 @@ export const Counter = () => {
             <span>Minutos</span>
           </div>
         </div>
-    </CounterBox>
+    </div>
   )
 }

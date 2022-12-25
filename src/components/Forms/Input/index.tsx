@@ -1,6 +1,5 @@
 import { forwardRef, ForwardRefRenderFunction } from "react";
-
-import { InputBox } from './styles';
+import styles from './styles.module.scss';
 interface InputProps {
   label: string;
   isRequired?: boolean;
@@ -12,9 +11,9 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   ref
 ) => {
   return (
-    <InputBox>
+    <div className={styles.boxInput}>
       {label && (
-        <p className="label">
+        <p className={styles.label}>
           {label} {isRequired && <span>*</span>}
         </p>
       )}
@@ -23,7 +22,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         ref={ref}
         {...props}
       />
-    </InputBox>
+    </div>
   )
 }
 

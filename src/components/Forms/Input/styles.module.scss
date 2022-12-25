@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const InputBox = styled.div`
+.boxInput {
   width: 100%;
 
   input {
@@ -17,14 +15,14 @@ export const InputBox = styled.div`
       font-size: 16px;
     }
   }
+}
 
-  .label {
-    font-ize: 18px;
-    color: #F3F3F3;
-    margin-bottom: 5px;
+.label {
+  font-ize: 18px;
+  color: #F3F3F3;
+  margin-bottom: 5px;
 
-    span {
-      color: #05FF00;
-    }
+  span {
+    color: #05FF00;
   }
-`;
+}

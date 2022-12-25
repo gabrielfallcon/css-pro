@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-import {ButtonProps} from './index';
-
-export const ButtonBox = styled.button<ButtonProps>`
+.btn {
   width: 100%;
   height: 60px;
   border: 1px solid #505050;
@@ -17,4 +14,4 @@ export const ButtonBox = styled.button<ButtonProps>`
   font-weight: 800;
   letter-spacing: 0.07em;
   cursor: pointer;
-`;
+}
