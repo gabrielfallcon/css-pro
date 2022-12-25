@@ -1,19 +1,11 @@
-import styled, {css} from 'styled-components';
-
-interface BlurProps {
-  positionBlur: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-  dimension: number;
-  color: 'green' | 'blue';
-}
-
-export const Main = styled.main`
+.main { 
   width: 100vw;
   height: 100vh;
   position: relative;
   padding: 0 32px;
-`;
+}
 
-export const Header = styled.header`
+.header {
   width: 100%;
   max-width: 1420px;
   display: flex;
@@ -21,52 +13,48 @@ export const Header = styled.header`
   justify-content: space-between;
   margin: 0 auto;
   margin: 68px auto 48px;
-`;
+}
 
-export const Blur = styled.div`
-  width: ${(props: BlurProps) => `${props.dimension}px`};
-  height: ${(props: BlurProps) => `${props.dimension}px`};
+.blur {
   border-radius: 50%;
   position: absolute;
   opacity: 0.3;
   z-index: -1;
-
-
   filter: blur(150px);
-  background: ${(props: BlurProps) => props.color === 'blue' ? '#00C2FF' : '#05FF00'};
 
-  ${(props: BlurProps) => {
-    switch(props.positionBlur) {
-      case 'top-left':
-        return positionTopLeft
-      case 'top-right':
-        return positionTopRight
-      case 'bottom-left': 
-        return positionBottomLeft
-      case 'bottom-right':
-        return positionBottomRight
-    }
-  }}
-`;
+  & .blue {
+    background: #00C2FF;
+  }
+  & .green {
+    background: #05FF00;
+  }
+  & .topLeft {
+    width: 227px;
+    height: 227px;
+    top: 11px;
+    left: -171px;
+  }
+  & .topRight {
+    width: 273px;
+    height: 273px;
+    top: 20px;
+    right: -216px;
+  }
+  & .bottomLeft {
+    width: 229px;
+    height: 229px;
+    bottom: -102px;
+    left: -266px;
+  }
+  & .bottomRight {
+    width: 227px;
+    height: 227px;
+    bottom: -84px;
+    right: -184px;
+  }
+}
 
-const positionTopLeft = css`
-  top: 11px;
-  left: -171px;
-`;
-const positionTopRight = css`
-  top: 20px;
-  right: -216px;
-`;
-const positionBottomLeft = css`
-  bottom: -102px;
-  left: -266px;
-`;
-const positionBottomRight= css`
-  bottom: -84px;
-  right: -184px;
-`;
-
-export const Section = styled.section`
+.section {
   width: 100%;
   max-width: 1420px;
   display: flex;
@@ -76,7 +64,7 @@ export const Section = styled.section`
   position: relative;
   margin-bottom: 80px;
 
-  .image-art {
+  .imageArt {
     width: 100%;
     max-width: 950px;
     position: absolute;
@@ -84,9 +72,9 @@ export const Section = styled.section`
     top: 0;
     z-index: -1;
   }
-`;
+}
 
-export const BoxForm = styled.div`
+.boxForm {
   width: 100%;
   max-width: 591px;
   display: flex;
@@ -123,4 +111,4 @@ export const BoxForm = styled.div`
     flex-direction: column;
     gap: 20px;
   }
-`;
+}
