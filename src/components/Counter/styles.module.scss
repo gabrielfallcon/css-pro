@@ -6,15 +6,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 42px 89px;
-  margin-bottom: 70px;
+  margin: 0 auto 70px;
   position: relative;
   backdrop-filter: blur(50px);
   border-image-slice: 1;
   border-image-width: 4px;
-  
- 
   border-radius: 10px;
   position: relative;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px ;
+  }
 
   &:before {
     content: "";
@@ -41,6 +45,11 @@
     color: #E6E6E6;
     z-index: 10;
 
+    @media (max-width: 769px) {
+      font-size: 28px;
+      text-align: center;
+    }
+
     span {
       background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
       -webkit-background-clip: text;
@@ -53,6 +62,10 @@
 .timer {
   display: flex;
   gap: 32px;
+
+  @media (max-width: 769px) {
+    gap: 20px;
+  }
 }
 .timerItem {
   display: flex;
@@ -63,11 +76,19 @@
     font-size: 21px;
     color: #E6E6E6;
     text-transform: uppercase;
+
+    @media (max-width: 769px) {
+      font-size: 12px;
+    }
   }
 }
 .boxNumber {
   display: flex;
   gap: 12px;
+
+  @media (max-width: 769px) {
+    gap: 6px;
+  }
 
   div {
     width: 55px;
@@ -82,6 +103,13 @@
     font-size: 44px;
     background: linear-gradient(180deg, #000000 0%, #4F4F4F 100%);
     margin-bottom: 10px;
+
+    @media (max-width: 769px) {
+      width: 30px;
+      height: 40px;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
 
     &:before {
       content: "";

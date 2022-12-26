@@ -15,11 +15,6 @@ const PreInscricao = () => {
   }
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
-        <img src="/images/logo-css-pro.png" alt="CSS Pro" />
-        <img src="/images/logo-dev-ajuda.png" alt="DevAjuda" width={189}/>
-      </header>
-
       <section className={styles.section}> 
         <div className={styles.boxForm}>
           <h1 className={styles.titleForm}>
@@ -38,10 +33,16 @@ const PreInscricao = () => {
               Concluir Pré Inscrição
             </Button>
           </form>
+
+          <img 
+            src="/images/css-pro.svg" 
+            alt="CSS Pro" 
+            className={styles.mobileImage}
+          />
         </div>
 
         <img 
-          src="/images/art-animate.png" 
+          src="/images/css-pro.svg" 
           alt="CSS Pro" 
           className={styles.imageArt}
         />

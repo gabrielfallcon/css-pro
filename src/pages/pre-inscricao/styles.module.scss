@@ -3,17 +3,12 @@
   height: 100vh;
   position: relative;
   padding: 0 32px;
+
+  @media (max-width: 769px) {
+    padding: 0 42px;
+  }
 }
 
-.header {
-  width: 100%;
-  max-width: 1420px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin: 68px auto 48px;
-}
 
 .blur {
   border-radius: 50%;
@@ -66,11 +61,15 @@
 
   .imageArt {
     width: 100%;
-    max-width: 950px;
+    max-width: 661px;
     position: absolute;
-    right: -10%;
+    right: 0;
     top: 0;
     z-index: -1;
+
+    @media (max-width: 769px) {
+      display: none;
+    }
   }
 }
 
@@ -87,6 +86,11 @@
     line-height: 70px;
     margin-bottom: 30px;
     color: #E6E6E6;
+
+    @media (max-width: 769px) {
+      font-size: 33px;
+      line-height: 44px;
+    }
     
     span {
       font-weight: 400;
@@ -110,5 +114,13 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
+  }
+  .mobileImage {
+    display: none;
+    margin-top: 60px;
+
+    @media (max-width: 769px) {
+      display: block;
+    }
   }
 }
