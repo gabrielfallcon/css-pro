@@ -29,7 +29,7 @@ const PreSubscribeForm = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      await api.post('subscribe', data);
+      // await api.post('subscribe', data);
       push('/success');
     } catch (err) {}
   }
