@@ -1,20 +1,12 @@
-import { useForm } from 'react-hook-form';
-import { Button } from "../../components/Button";
-import Input  from "../../components/Forms/Input";
 import { Counter } from "../../components/Counter";
-import api from "../../services/api";
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
+import PreSubscribeForm from '../../components/Forms/pre-subscribe';
 
 const PreInscricao = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const onSubmit = async (data: any) => {
-    await api.post('subscribe', data);
-  }
   return (
-    <main className={styles.main}>
+    <>
       <section className={styles.section}> 
         <div className={styles.boxForm}>
           <h1 className={styles.titleForm}>
@@ -24,15 +16,8 @@ const PreInscricao = () => {
           <p className={styles.descriptionForm}>
             Inscreva-se para ter vantagens exclusiva e a oportunidade de garantir sua vaga com antecedência.
           </p>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <Input label="Nome" {...register("name")} isRequired />
-            <Input label="E-mail" {...register("email")} isRequired />
-            <Input label="Telefone" {...register("phone")} />
 
-            <Button type="submit">
-              Concluir Pré Inscrição
-            </Button>
-          </form>
+          <PreSubscribeForm />
 
           <img 
             src="/images/css-pro.svg" 
@@ -78,7 +63,7 @@ const PreInscricao = () => {
           styles.bottomRight
         )}
       />
-    </main>
+    </>
   )
 }
 

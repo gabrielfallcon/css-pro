@@ -7,12 +7,16 @@
     border: 1px solid #505050;
     border-radius: 5px;
     background: #141617;
-    padding: 0 14px;
-    color: #ffffff;
+    padding: 0 20px;
+    color: #E6E6E6;
 
     &::placeholder {
       color: #4F4F4F;
       font-size: 16px;
+    }
+
+    &:focus {
+      border: 1px solid #00C2FF
     }
   }
 }

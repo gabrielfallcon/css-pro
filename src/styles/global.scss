@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'clock';
+  src: url('../../public/font/alarm-clock.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +11,18 @@
 }
 body {
   background: #0D0F10;
+
+  main { 
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 0 32px;
+  
+    @media (max-width: 769px) {
+      padding: 0 42px;
+    }
+  }
 }
 input, textarea {
   outline: 0;

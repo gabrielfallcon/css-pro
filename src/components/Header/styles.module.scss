@@ -4,16 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 68px auto 48px;
+  margin: 74px auto 42px;
   
 
-  @media (max-width: 1420px) {
-    padding: 0 32px;
-  }
 
   @media (max-width: 769px) {
-    margin: 0 auto;
-    padding: 41px 42px 48px;
+    margin: 42px auto 60px;
 
     img {
       width: 110px;

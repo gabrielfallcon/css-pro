@@ -1,6 +1,6 @@
-import { forwardRef, ForwardRefRenderFunction } from "react";
+import { forwardRef, ForwardRefRenderFunction, HTMLAttributes } from "react";
 import styles from './styles.module.scss';
-interface InputProps {
+interface InputProps extends HTMLAttributes<HTMLInputElement>{
   label: string;
   isRequired?: boolean;
   typeInput?: string;

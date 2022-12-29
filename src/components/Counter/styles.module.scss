@@ -18,6 +18,7 @@
     flex-direction: column;
     padding: 30px;
     gap: 30px ;
+    margin: 0 auto 40px;
   }
 
   &:before {
@@ -93,16 +94,17 @@
   div {
     width: 55px;
     height: 70px;
-    border-radius: 5px;
     position: relative;
     backdrop-filter: blur(18.014px);
-    color: #05FF00;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 44px;
     background: linear-gradient(180deg, #000000 0%, #4F4F4F 100%);
     margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 44px;
+    color: #05FF00;
+    font-family: 'clock';
 
     @media (max-width: 769px) {
       width: 30px;

@@ -1,0 +1,157 @@
+.section {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 120px;
+
+  @media (max-width: 769px) {
+    margin-top: 50px;
+  }
+}
+.title {
+  width: 100%;
+  font-size: 50px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-align: center;
+
+  @media (max-width: 769px) {
+    text-align: left;
+  }
+}
+
+.subtitle {
+  font-size: 44px;
+  color: #E6E6E6;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 769px) {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+.boxProgress {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media (max-width: 769px) {
+    margin-bottom: 30px;
+  }
+}
+
+.progressTitle {
+  font-size: 16px;
+  line-height: 33px;
+  color: #E6E6E6;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.contentProgress {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.barProgress {
+  width: 100%;
+  height: 10px;
+  max-width: 731px;
+  background: #121516;
+  border-radius: 30px;
+  position: relative;
+}
+.barPercent {
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+  animation: progress-animation 1s linear;
+}
+@keyframes progress-animation {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.progressSuccess {
+  width: 100%;
+  animation: progress-success 1s linear;
+}
+
+@keyframes progress-success {
+  0% {
+    width: 50%
+  }
+  100% {
+    width: 100%;
+  }
+}
+.percentText {
+  font-size: 14px;
+  color: #E6E6E6;
+  letter-spacing: 0.07em;
+}
+.openWhats {
+  width: 100%;
+  max-width: 779px;
+  font-size: 22px;
+  line-height: 33px;
+  color: #E6E6E6;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 769px) {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #0D0F10;
+
+  &::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    inset: 0 0 auto;
+    background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+  }
+}
+
+.boxSocial {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+}
