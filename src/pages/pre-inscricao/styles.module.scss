@@ -19,7 +19,7 @@
   left: -171px;
 
   @media (max-width: 769px) {
-    top: 30vh;
+    top: 82vh;
     left: -184px;
   }
 }
@@ -73,7 +73,7 @@
 
   .imageArt {
     width: 100%;
-    max-width: 661px;
+    max-width: 900px;
     position: absolute;
     right: 0;
     top: 0;
@@ -124,7 +124,9 @@
  
   .mobileImage {
     display: none;
+    width: auto;
     margin-top: 60px;
+    transform: scale(1.8);
 
     @media (max-width: 769px) {
       display: block;

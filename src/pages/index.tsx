@@ -1,3 +1,11 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react"
+
+
 export default function Home() {
-  return <h1>hello</h1>
+  const {push} = useRouter();
+  useEffect(() => {
+    push('/pre-inscricao');
+  }, []);
+  return <></>
 }
