@@ -3,9 +3,9 @@ import { useEffect } from "react"
 
 
 export default function Home() {
-  const {push} = useRouter();
-  useEffect(() => {
-    push('/pre-inscricao');
-  }, []);
+  // const {push} = useRouter();
+  // useEffect(() => {
+  //   push('/pre-inscricao');
+  // }, []);
   return <></>
 }
