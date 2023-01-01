@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 import { Button } from "../../components/Button";
 import { useState } from 'react';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import router from 'next/router';
 
 const PreInscricao = () => {
   const [percent, setPercent] = useState(50);
@@ -12,6 +13,9 @@ const PreInscricao = () => {
   const handlePercent = () => {
     setPercent(100)
     setActiveSucess(true)
+    setTimeout(() => {
+      router.push('https://chat.whatsapp.com/LhycdAz33lkLppyjbLV4Ba');
+    }, 2000)
   }
   return (
     <>

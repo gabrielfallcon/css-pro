@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode } from "react"
 import styles from './styles.module.scss';
 

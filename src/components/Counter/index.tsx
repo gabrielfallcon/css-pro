@@ -11,7 +11,7 @@ export const Counter = () => {
   const dateAgended = new Date('Jan 16 2023 07:00:00').getTime();
   const currentTime = new Date().getTime();
 
-  setTimeout(() => {
+  setInterval(() => {
     const differrence = dateAgended - currentTime;
 
     const dayFormat = Math.floor(differrence / 1000 / 60 / 60 / 24);
@@ -21,7 +21,7 @@ export const Counter = () => {
     setDay(dayFormat);
     setHours(hoursFormat);
     setMinute(minutesFormat);
-  }, 60000);
+  }, 1000);
 
   const mapperNumber = (time: number) => {
     let formatTime = String(time).split('');
