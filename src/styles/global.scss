@@ -9,6 +9,11 @@
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
 }
+html,body{
+  -webkit-overflow-scrolling : touch !important;
+  overflow: auto !important;
+  height: 100% !important;
+}
 body {
   background: #0D0F10;
 
