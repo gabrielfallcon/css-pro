@@ -60,7 +60,7 @@ const PreSubscribeForm = () => {
 
   return (
     <>
-      {/* {!existsUser ? ( */}
+      {!existsUser ? (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <Input 
             label="Nome" 
@@ -85,7 +85,7 @@ const PreSubscribeForm = () => {
             Concluir Pré Inscrição
           </Button>
         </form>
-      {/* ) : (
+      ) : (
         <>
           <h2>
             Esse e-mail já esta sendo utilizado em outro cadastro
@@ -97,7 +97,7 @@ const PreSubscribeForm = () => {
             Tentar com outro E-mail
           </Button>
         </>
-      )} */}
+      )}
       {load && <Loading/>}
     </>
   )
