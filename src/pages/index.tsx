@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 export default function Home(props: any) {
   const {push} = useRouter();
   useEffect(() => {
-    push('/pre-inscricao');
+    push('/css-pro/pre-inscricao');
   }, []);
   return <></>
 }

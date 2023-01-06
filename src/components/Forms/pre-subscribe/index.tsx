@@ -49,7 +49,7 @@ const PreSubscribeForm = () => {
       const response = await api.post('subscribe', data);
       clearInputs()
       console.log(response, 'response');
-      push('/success');
+      push('/css-pro/success');
       
     } catch (err) {
       clearInputs()
