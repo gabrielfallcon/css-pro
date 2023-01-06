@@ -154,4 +154,9 @@
   justify-content: center;
   border-radius: 10px;
   background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, #00FF0A 0%, #00FF0A 100%);
+  }
 }

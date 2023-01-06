@@ -59,37 +59,46 @@ const PreSubscribeForm = () => {
   }
 
   return (
-    <>
+    <div className={styles.boxForm}>
+      <h1 className={styles.titleForm}>
+        <span>Pré inscrição </span> <br /> do curso CSS PRO
+      </h1>
+
       {!existsUser ? (
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-          <Input 
-            label="Nome" 
-            {...register("name")} 
-            isRequired 
-            placeholder='Digite aqui seu primeiro nome' 
-            error={errors.name?.message}
-          />
-          <Input 
-            label="E-mail" 
-            {...register("email")} 
-            isRequired 
-            placeholder='Digite aqui seu melhor e-mail' 
-            error={errors.email?.message}
-          />
+        <>
+          <p className={styles.descriptionForm}>
+            Inscreva-se para ter vantagens exclusivas e a oportunidade de garantir sua vaga com antecedência.
+          </p>
+          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+            <Input 
+              label="Nome" 
+              {...register("name")} 
+              isRequired 
+              placeholder='Digite aqui seu primeiro nome' 
+              error={errors.name?.message}
+            />
+            <Input 
+              label="E-mail" 
+              {...register("email")} 
+              isRequired 
+              placeholder='Digite aqui seu melhor e-mail' 
+              error={errors.email?.message}
+            />
 
-          <Input label="Telefone" {...register("phone")} placeholder='Digite aqui seu telefone' />
-          <p>{errors.phone?.message}</p>
+            <Input label="Telefone" {...register("phone")} placeholder='Digite aqui seu telefone' />
+            <p>{errors.phone?.message}</p>
 
 
-          <Button type="submit">
-            Concluir Pré Inscrição
-          </Button>
-        </form>
+            <Button type="submit">
+              Concluir Pré Inscrição
+            </Button>
+          </form>
+        </>
       ) : (
         <>
-          <h2>
-            Esse e-mail já esta sendo utilizado em outro cadastro
-          </h2>
+          <p className={styles.descriptionForm}>
+            Este e-mail já está sendo utilizado em outro cadastro.
+          </p>
             <Button type="submit" onClick={() => {
               clearInputs()
               setExistsUser(false)
@@ -98,8 +107,14 @@ const PreSubscribeForm = () => {
           </Button>
         </>
       )}
+
+      <img 
+        src="/images/css-pro.svg" 
+        alt="CSS Pro" 
+        className={styles.mobileImage}
+      />
       {load && <Loading/>}
-    </>
+    </div>
   )
 }
 

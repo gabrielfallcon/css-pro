@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
-import { Button } from "../../components/Button";
+import { Button } from "../../../components/Button";
 import { useState } from 'react';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import router from 'next/router';
@@ -16,6 +16,10 @@ const PreInscricao = () => {
     setTimeout(() => {
       router.push('https://chat.whatsapp.com/LhycdAz33lkLppyjbLV4Ba');
     }, 2000)
+  }
+
+  const onClickSocial = (url: string) => {
+    router.push(url);
   }
   return (
     <>
@@ -44,9 +48,9 @@ const PreInscricao = () => {
 
       <footer className={styles.footer}>
         <div className={styles.boxSocial}>
-          <FaInstagram size={27} color="#0D0F10" />
+          <FaInstagram size={27} color="#0D0F10" onClick={() => onClickSocial('https://www.instagram.com/devajuda/')}/>
         </div>
-        <div className={styles.boxSocial}>
+        <div className={styles.boxSocial} onClick={() => onClickSocial('https://www.youtube.com/@devajuda')}>
           <FaYoutube size={27} color="#0D0F10"/>
         </div>
       </footer>
