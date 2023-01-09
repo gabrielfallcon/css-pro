@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 
@@ -10,18 +10,28 @@ export const Counter = () => {
 
   const dateAgended = new Date('Jan 16 2023 07:00:00').getTime();
   const currentTime = new Date().getTime();
+  
+  const handleTimer = (dateAgended: number, currentTime: number) => {
+    setInterval(() => {
+      const differrence = dateAgended - currentTime;
+      const dayFormat = Math.floor(differrence / 1000 / 60 / 60 / 24);
+      const hoursFormat = Math.floor(differrence / 1000 / 60 / 60) % 24;
+      const minutesFormat = Math.floor(differrence / 1000 / 60) % 60;
+  
+      setDay(dayFormat);
+      setHours(hoursFormat);
+      setMinute(minutesFormat);
+    }, 1000);
+  };
 
-  setInterval(() => {
-    const differrence = dateAgended - currentTime;
+  // setInterval(() => {
+  //   handleTimer(dateAgended, currentTime)
+  //   console.log(dateAgended, currentTime)
+  // }, 59000);
 
-    const dayFormat = Math.floor(differrence / 1000 / 60 / 60 / 24);
-    const hoursFormat = Math.floor(differrence / 1000 / 60 / 60) % 24;
-    const minutesFormat = Math.floor(differrence / 1000 / 60) % 60;
-
-    setDay(dayFormat);
-    setHours(hoursFormat);
-    setMinute(minutesFormat);
-  }, 1000);
+  useEffect(() => {
+    handleTimer(dateAgended, currentTime)
+  }, [currentTime, dateAgended]);
 
   const mapperNumber = (time: number) => {
     let formatTime = String(time).split('');

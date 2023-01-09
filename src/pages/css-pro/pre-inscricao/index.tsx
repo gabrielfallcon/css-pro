@@ -16,8 +16,6 @@ const PreInscricao = () => {
           className={styles.imageArt}
         />
       </section>
-      
-      <Counter />
 
       <div 
         className={clsx(
