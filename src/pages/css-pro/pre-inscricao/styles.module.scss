@@ -1,9 +1,9 @@
 .blur {
   border-radius: 50%;
   position: absolute;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -1;
-  filter: blur(150px);
+  filter: blur(80px);
 }
 
 .blue {
@@ -15,7 +15,7 @@
 .topLeft {
   width: 227px;
   height: 227px;
-  top: 11px;
+  top: 0;
   left: -171px;
 
   @media (max-width: 769px) {
@@ -26,7 +26,7 @@
 .topRight {
   width: 273px;
   height: 273px;
-  top: 20px;
+  top: 0;
   right: -216px;
 
   @media (max-width: 769px) {
@@ -46,6 +46,7 @@
     bottom: -326px;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
   }
 }
 .bottomRight {
@@ -66,22 +67,59 @@
   max-width: 1420px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0 auto;
   position: relative;
   margin-bottom: 80px;
+}
+.boxImg {
+  position: relative;
+  width: 100%;
+  max-width: 661px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 769px) {
+    display: none;
+  }
+
+  
+  .blurImage {
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(180px);
+    background: #05FF00;
+  }
 
   .imageArt {
     width: 100%;
-    max-width: 900px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
+    max-width: 661px;
+    z-index: 0;
+  }
 
-    @media (max-width: 769px) {
-      display: none;
-    }
+  .bottomLeftImage {
+    width: 209px;
+    height: 209px;
+    left: -20px;
+    bottom: 40px;
+  }
+
+  .bottomRightImage {
+    width: 157px;
+    height: 157px;
+    right: 33px;
+    bottom: 6px;
+  }
+
+  .topRightImage {
+    width: 281px;
+    height: 281px;
+    top: 103px;
+    right: 53px;
   }
 }
+
 

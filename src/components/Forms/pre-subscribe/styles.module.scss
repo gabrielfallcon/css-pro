@@ -57,3 +57,51 @@
     margin-bottom: 60px;
   }
 }
+
+.boxImg {
+  position: relative;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 769px) {
+    display: flex;
+  }
+  
+  .blurImage {
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+    filter: blur(80px);
+    background: #05FF00;
+  }
+
+  .imageArt {
+    width: 100%;
+    max-width: 661px;
+    z-index: 0;
+  }
+  
+  .bottomLeftImage {
+    width: 91px;
+    height: 91px;
+    left: -8px;
+    bottom: 17px;
+  }
+
+  .bottomRightImage {
+    width: 68px;
+    height: 68px;
+    right: 14px;
+    bottom: 2px;
+  }
+
+  .topRightImage {
+    width: 123px;
+    height: 123px;
+    top: 44px;
+    right: 23px;
+  }
+}
