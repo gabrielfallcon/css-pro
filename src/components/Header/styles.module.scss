@@ -11,13 +11,18 @@
   @media (max-width: 769px) {
     margin: 42px auto 60px;
     padding: 0 42px;
-
-    img {
-      width: 110px;
-    }
   }
 
   img {
-    width: 280px;
+    @media (max-width: 769px) {
+      width: 110px;
+
+      &:first-child {
+        height: 26px;
+      }
+      &:last-child {
+        height: 45px;
+      }
+    }
   }
 }

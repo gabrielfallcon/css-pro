@@ -32,6 +32,9 @@ const CssPro = () => {
       </section>
 
       <section className={styles.sectionMessageCase}>
+        <img src="/images/faixa.svg" alt="" className={clsx(styles.faxMessageCase, styles.faixaTop)} loading="lazy"/>
+        <img src="/images/faixa.svg" alt="" className={clsx(styles.faxMessageCase, styles.degTop)} loading="lazy"/>
+        <img src="/images/faixa.svg" alt="" className={clsx(styles.faxMessageCase, styles.degBottom)} loading="lazy"/>
         <div className={styles.boxCase}>
           <span>
             PEÇO QUE VOCÊ PRESTE MUITO ATENÇÃO NAS PRÓXIMAS LINHAS ABAIXO. PORQUE PODE MUDAR O RUMO DA SUAS PRÓXIMAS ENTREVISTAS OU SEU FUTURO NA EMPRESA QUE VOCÊ ESTÁ.
@@ -114,6 +117,7 @@ const CssPro = () => {
       <section className={clsx(styles.sectionInsight, styles.sectionDefault)}>
         <div className={styles.contentDefault}>
           <div className={styles.boxTextInsight}>
+            <img src="/images/circulo.svg" alt="" className={styles.imageInsight}/>
             <h2>
               Olhe para esta página <br />
               que você está agora… <br />

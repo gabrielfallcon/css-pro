@@ -135,10 +135,26 @@
   gap: 150px;
   position: relative;
   padding: 0 32px 100px;
+  position: relative;
 
   @media (max-width: 768px) {
     gap: 50px;
     padding: 0 42px 50px;
+  }
+
+  .faxMessageCase {
+    width: 120%;
+    position: absolute;
+  }
+  .faixaTop {
+    top: 100px;
+  }
+  .degTop {
+    top: 400px;
+    transform: rotate(-15deg);
+  }
+  .degBottom {
+    transform:  rotate(15deg);
   }
 
   .boxCase {
@@ -291,11 +307,25 @@
   }
 
   .boxTextInsight {
+    position: relative;
+
+    .imageInsight {
+      width: 343px;
+      position: absolute;
+      z-index: 0;
+      left: -141px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    
     & > h2 {
+      position: sticky;
       font-weight: 500;
       font-size: 43px;
       line-height: 72px;
       color: #E6E6E6;
+      z-index: 20;
 
       @media (max-width: 768px) {
         font-weight: 700;
