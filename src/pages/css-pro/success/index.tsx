@@ -5,6 +5,7 @@ import { Button } from "../../../components/Button";
 import { useState } from 'react';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import router from 'next/router';
+import Footer from '../../../components/Footer';
 
 const PreInscricao = () => {
   const [percent, setPercent] = useState(50);
@@ -46,14 +47,7 @@ const PreInscricao = () => {
         <Button onClick={handlePercent}>WHATSAPP</Button>
       </section>
 
-      <footer className={styles.footer}>
-        <div className={styles.boxSocial}>
-          <FaInstagram size={27} color="#0D0F10" onClick={() => onClickSocial('https://www.instagram.com/devajuda/')}/>
-        </div>
-        <div className={styles.boxSocial} onClick={() => onClickSocial('https://www.youtube.com/@devajuda')}>
-          <FaYoutube size={27} color="#0D0F10"/>
-        </div>
-      </footer>
+     <Footer />
     </>
   )
 }

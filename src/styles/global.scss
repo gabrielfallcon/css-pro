@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 html,body{
   -webkit-overflow-scrolling : touch !important;
@@ -23,19 +24,19 @@ body {
     overflow: hidden;
     position: relative;
 
-    &:has(footer) {
-      footer {
-        padding: 0 32px calc(120px + 55px);
-      }
-    }
+    // &:has(footer) {
+    //   footer {
+    //     padding: 0 32px calc(120px + 55px);
+    //   }
+    // }
   
-    @media (max-width: 769px) {
-      &:has(footer) {
-        footer {
-          padding: 0 42px calc(120px + 55px);
-        }
-      }
-    }
+    // @media (max-width: 769px) {
+    //   &:has(footer) {
+    //     footer {
+    //       padding: 0 42px calc(120px + 55px);
+    //     }
+    //   }
+    // }
   }
 }
 input, textarea {

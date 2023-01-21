@@ -303,6 +303,7 @@
     @media (max-width: 768px) {
       gap: 20px;
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -316,6 +317,13 @@
       left: -141px;
       top: 50%;
       transform: translateY(-50%);
+
+      @media (max-width: 768px) {
+        width: 157px;
+        left: auto;
+        right: -30px;
+        transform: translateY(-60%);
+      }
     }
 
     
@@ -344,7 +352,7 @@
         @media (max-width: 768px) {
           font-weight: 700;
           font-size: 24px;
-          line-height: 33px;
+          line-height: 50px;
         }
       }
     }
@@ -695,3 +703,210 @@
     }
   }
 }
+
+.sectionModules {
+  padding: 100px 32px;
+  background: #09090A;
+
+  @media (max-width: 768px) {
+    padding: 42px;
+  }
+
+  .contentDefault {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .titleModules {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 45px;
+      background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin-bottom: 30px;
+
+      @media (max-width: 768px) {
+        font-size: 29px;
+        line-height: 45px;
+      }
+    }
+    .description {
+      font-size: 26px;
+      line-height: 45px;
+      color: #E6E6E6;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .listDropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.sectionHistory {
+  padding: 100px 42px;
+
+  @media (max-width: 768px) {
+    padding: 50px 42px;
+  }
+
+  .contentDefault {
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  .imageComputer {
+    width: 100%;
+    max-width: 598px;
+  }
+
+  .boxTextHistory {
+    width: 100%;
+    max-width: 752px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 20px;
+
+    & > h2 {
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 45px;
+      background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 41px;
+      }
+    }
+    .bolder {
+      font-weight: 500;
+    }
+    .color {
+      background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 500;
+    }
+    p {
+      font-weight: 300;
+    }
+    p, strong {
+      font-size: 20px;
+      line-height: 30px;
+      color: #E6E6E6;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+.sectionHelp {
+  background: #09090A;
+  padding: 100px 42px;
+
+  @media (max-width: 768px) {
+    padding: 50px 42px;
+  }
+
+  .contentDefault {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 42px;
+      align-items: flex-start;
+    }
+  }
+
+  .boxTextImage {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: left;
+    position: relative;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    .imageInsight {
+      width: 343px;
+      position: absolute;
+      z-index: 0;
+      left: -141px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (max-width: 768px) {
+        width: 157px;
+        left: auto;
+        right: 30px;
+        transform: translateY(-55%);
+      }
+    }
+
+    
+    & > h2 {
+      width: 100%;
+      max-width: 360px;
+      position: sticky;
+      white-space: pre-line;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 68px;
+      background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      z-index: 20;
+
+      @media (max-width: 768px) {
+        font-size: 38.8015px;
+        line-height: 41px;
+      }
+    }
+
+  }
+  .listDropdownHelp {
+    width: 100%;
+    max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    .separate {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, #00C2FF 20%, #00FF0A 50%, #09090A  80%); 
+    }
+  }
+}
+
