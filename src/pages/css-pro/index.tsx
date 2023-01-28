@@ -6,8 +6,13 @@ import styles from "./styles.module.scss";
 import DropdownModules from "../../components/Dropdown/dropModules";
 import DropdownList from "../../components/Dropdown/dropList";
 import Footer from "../../components/Footer";
+import route from "next/router";
+import { Blur } from "../../components/Blur";
 
 const CssPro = () => {
+  const redirectPrice = () => {
+    route.push('/css-pro#pricing');
+  }
   return (
     <>
       <div className={styles.targ}>
@@ -30,7 +35,7 @@ const CssPro = () => {
             <span>Curso CSS PRO</span>
             <br />O único apto para a vaga
           </h1>
-          <Button>QUERO TRIPLICAR MEU SALÁRIO</Button>
+          <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
 
           <span className={styles.spanObs}>
             Obs: O profissional precisará de conhecimento básico de lógica de
@@ -38,6 +43,23 @@ const CssPro = () => {
             se…Dominar a simplicidade do CSS
           </span>
         </div>
+
+        <Blur 
+          width="229px"
+          height="219px"
+          bottom="0"
+          right="-195px"
+          color="green"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="231px"
+          height="231px"
+          top="40%"
+          left="-184px"
+          color="blue"
+          toRenderOnly="mobile"
+        />
       </section>
 
       <section className={styles.sectionMessageCase}>
@@ -117,7 +139,7 @@ const CssPro = () => {
             oportunidades que me fez destacar dos outros concorrentes…
           </p>
 
-          <Button>QUERO TRIPLICAR MEU SALÁRIO</Button>
+          <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
         </div>
 
         <div className={styles.exposedCSS}>
@@ -154,6 +176,23 @@ const CssPro = () => {
             VOCÊ.
           </span>
         </div>
+
+        <Blur 
+          width="560px"
+          height="536px"
+          bottom="170px"
+          left="-518px"
+          color="green"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="387px"
+          height="387px"
+          bottom="450px"
+          right="-319px"
+          color="green"
+          toRenderOnly="mobile"
+        />
       </section>
 
       <section className={clsx(styles.sectionInsight, styles.sectionDefault)}>
@@ -191,7 +230,7 @@ const CssPro = () => {
               didática correta.
             </p>
 
-            <Button>QUERO TRIPLICAR MEU SALÁRIO</Button>
+            <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
           </div>
         </div>
       </section>
@@ -213,9 +252,42 @@ const CssPro = () => {
             </p>
           </div>
         </div>
+
+        <Blur 
+          width="474px"
+          height="453px"
+          top="450px"
+          left="-220px"
+          color="blue"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="560px"
+          height="536px"
+          bottom="170px"
+          right="-317px"
+          color="green"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="250px"
+          height="250px"
+          top="0"
+          left="-275px"
+          color="green"
+          toRenderOnly="mobile"
+        />
+        <Blur 
+          width="250px"
+          height="250px"
+          top="423px"
+          right="-319px"
+          color="blue"
+          toRenderOnly="mobile"
+        />
       </section>
 
-      <section className={styles.sectionPrice}>
+      <section className={styles.sectionPrice} id="pricing">
         <div className={clsx(styles.boxTextPrice, styles.boxMobile)}>
           <p>
             Tudo isso com o menor preço de qualquer site de emprego que você
@@ -284,7 +356,7 @@ const CssPro = () => {
                   De <span className={styles.risc}> R$ 450,00</span> por apenas
                 </p>
                 <p>
-                  6x <span className={styles.price}>R$ 32,99</span>
+                  6x <span className={styles.price}>R$ 36,53</span>
                 </p>
               </div>
 
@@ -301,7 +373,9 @@ const CssPro = () => {
                 </li>
               </ul>
 
-              <Button>QUERO TER ACESSO AGORA</Button>
+              <Button onClick={() => {
+                route.push('https://pay.kiwify.com.br/uAbUIZQ')
+              }}>QUERO TER ACESSO AGORA</Button>
             </div>
           </div>
         </div>
@@ -326,6 +400,31 @@ const CssPro = () => {
             </p>
           </div>
         </div>
+
+        <Blur 
+          width="560px"
+          height="560px"
+          top="0"
+          left="-600px"
+          color="green"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="560px"
+          height="536px"
+          bottom="-560px"
+          right="-446px"
+          color="blue"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="250px"
+          height="250px"
+          top="0"
+          left="-275px"
+          color="blue"
+          toRenderOnly="mobile"
+        />
       </section>
 
       <section className={styles.sectionModules}>
@@ -334,53 +433,73 @@ const CssPro = () => {
             Mas, preciso lembrá-lo de que…
           </h2>
           <p className={styles.description}>
-            Você terá 7 módulos completos que mostrará literalmente o passo á
+            Você terá 9 módulos completos + Comunidade no discord + suporte ao vivo que mostrará literalmente o passo á
             passo do CSS:
           </p>
 
           <div className={styles.listDropdown}>
             <DropdownModules 
-              title="As propriedades do CSS"
-              subtitle="Flexbox, Grid e entre outras que grandes desenvolvedores utilizam em Frontend."
-              description="test"
-            />
-            <DropdownModules 
-              title="Cada vez VOCÊ está um passo à frente"
-              subtitle="Pseudo class em CSS e por que utilizá-los."
-              description="test"
-            />
-            <DropdownModules 
-              title="Comunidade no Discord"
-              subtitle="Faça parte da comunidade CSS Ninja para tirar dúvidas, networking e oportunidades no mercado!"
-              description="test"
-            />
-            <DropdownModules 
-              title="O ajuntamento"
-              subtitle="Aqui iremos juntar tudo que aprendemos nos módulos anteriores em projetos práticos, para você conseguir aprender de forma mais simples e rápida tudo o que diz a respeito do CSS."
-              description="test"
+              title="Introdução HTML e CSS"
+              subtitle="Não importa se você não sabia de nada. Aqui você sairá sem nenhuma dúvida se quer."
+              description="Irei te mostrar os primeiros passos com HTML, no caso de você não ter conhecimento com HTML terá o mínimo de conheicmento para absorver o máximo do CSS."
             />
             <DropdownModules 
               title="O mapa"
               subtitle="Aqui iremos mostrar como iniciar uma estrutura de elemento de tela."
-              description="test"
+              description="Uma das parte mais importantes de uma ótima estilização é de fato a estruturação de seu HTML, com isso conseguimos ter uma maior flexibilidade para criar sites responsivos, deixar nosso layout o mais fiel possivel ao layout garantindo uma grande expriência ao usuário final. Tudo se trata de experiência... Focar nos mínimos detalhes como esse é um dos pontos que te torna um dev com destaque!"
+            />
+            <DropdownModules 
+              title="As propriedades do CSS"
+              subtitle="Flexbox, Grid e entre outras que grandes desenvolvedores utilizam em Frontend."
+              description="Aqui passaremos pelas propriedades que iremos utilizar no CSS ao decorrer do curso, não vou te passar um wikpédia de informações, mas sim te passar todas as propriedades que você de fato vai utilizar todos os dias como desenvolvedor!"
+            />
+             <DropdownModules 
+              title="Medidas em CSS"
+              subtitle="Aqui falarei um pouco sobre todas as medidas que podemos utilizar com CSS e as dias diferenças e quando usar cada uma."
+              description="Precisamos entender como podemos dimenssionar nossos elementos em tela e tomar a decisão certo ao utilizar uma unidade de medida em CSS, nesse módulo você saberá para que serve as unidades de medidas e em que ocasiões utiliza-la."
+            />
+            <DropdownModules 
+              title="Cada vez VOCÊ está um passo à frente"
+              subtitle="Pseudo class em CSS e por que utilizá-los."
+              description="CSS além de suas animações... Conseguimos determinar algum evento para o nosso site após uma ação do usuário, seja em um botão, uma div etc.. Com este módulo você será capaz de controlar as ações do usuário e promover alguma experiência ao usuário após tal feito."
             />
             <DropdownModules 
               title="A mágica"
               subtitle="Animações em CSS."
-              description="test"
+              description="Aqui veremos sobre transform e keyframes.. Como conseguimos controlar as animações dentro de nosso site, mudando elementos de posição, controlando seu percurso, de fato tendo tudo na palma de sua mão!"
             />
             <DropdownModules 
-              title="Não sou médico mas faço PLANTÃO"
-              subtitle="Aqui poderá tirar toda sua dúvida para você virar um NINJA DO CSS."
-              description="test"
+              title="Responsividade em CSS"
+              subtitle="Aqui iremos explorar como é possivel flexibilizar um site para ser visivel atravéz de dispositivos móveis"
+              description="Não dá pra te falar que apenas um site fica bom se você desenvolve-lo para web, é necessário desenvolver para mobile também! Nesse módulo você aprenderá como tornar um site responsivo."
+            />
+            <DropdownModules 
+              title="Mãos a obra!"
+              subtitle="Aqui iremos juntar tudo que aprendemos nos módulos anteriores em projetos práticos, para você conseguir aprender de forma mais simples e rápida tudo o que diz a respeito do CSS."
+              description="Neste módulo criaremos projetos juntos para que você desenvolva sites incriveis com todos os recursos que aprendeu nos módulos anteriores."
             />
             <DropdownModules 
               title="Insegurança!? Só se for para subir no palco para falar dos grandes projetos que VOCÊ fez."
               subtitle="Você encontrará neste módulo desafios técnicos que o farão ser capaz de fazer qualquer com suas próprias mãos."
-              description="test"
+              description="Não adianta... O domínio vem com a prática de se desafiar com coisas novas... Aqui não será diferente!"
+            />
+            <DropdownModules 
+              title="Guia para o sucesso"
+              subtitle="Te mostrarei como você pega tudo isso que te ensinei até aqui e transforme em uma arma secreta para que você tenha vantagens em ser reconhecido na sua empresa, na entrevista etc... "
+              description="Muitos desenvolvedores não dão a mínima ao CSS, o problema é que está deixando de aproveitar oportunidades que provavelmente se abriria... O CSS não faz tudo sózinho é importante você ter isso em mente. Mas com ele você já é visto de outra forma!"
+            />
+            <DropdownModules 
+              title="Comunidade no Discord"
+              subtitle="Faça parte da comunidade CSS Ninja para tirar dúvidas, networking e oportunidades no mercado!"
+              description="Em nossa comunidade você poderá criar network com nossos alunos, terá acesso a oportunidades de vagas para que você possa aplicar para entrevistas... Não fique de fora!"
+            />
+            <DropdownModules 
+              title="Não sou médico mas faço PLANTÃO"
+              subtitle="Aqui poderá tirar toda sua dúvida para você virar um NINJA DO CSS."
+              description="Dentro de nossa comunidade teremos um canal para tirar dúvidas online toda sexta-feira! você não será abandonado, eu estarei aqui para segurar na sua mão, meu sucesso é ver o seu!"
             />
 
-            <Button>QUERO TER ACESSO AGORA</Button>
+            <Button onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
           </div>
         </div>
       </section>
@@ -417,6 +536,23 @@ const CssPro = () => {
             </strong>
           </div>
         </div>
+
+        <Blur 
+          width="200px"
+          height="200px"
+          bottom="0"
+          left="0"
+          color="blue"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="150px"
+          height="150px"
+          top="0"
+          right="0"
+          color="green"
+          toRenderOnly="mobile"
+        />
       </section>
 
       <section className={styles.sectionHelp}>
@@ -437,6 +573,13 @@ const CssPro = () => {
               title="Esse método funciona para mim?" 
               description="R: Sim. CSS PRO já foi testado e comprovado não somente por mim mesmo, que tripliquei o meu salário e sim por alunos que testaram e seguiram cada passo simples que antes eram totalmente complexos."
             />
+            <div className={styles.separate} />
+
+            <DropdownList 
+              title="Esse curso tem certificado?" 
+              description="R: Sim. Após o termino do curso você poderá emitir o certificado de conclusão de curso."
+            />
+
             <div className={styles.separate} />
             <DropdownList 
               title="Como será entregue o produto?" 

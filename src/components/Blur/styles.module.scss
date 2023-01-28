@@ -1,0 +1,29 @@
+.blur {
+  position: absolute;
+  filter: blur(250px);
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.blurGreen {
+  background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+}
+
+.blurBlue {
+  background: #00C2FF;
+}
+
+.desktopOnly {
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileOnly {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

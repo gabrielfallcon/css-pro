@@ -45,6 +45,7 @@
   position: relative;
 
   @media (max-width: 768px) {
+    height: calc(85vh - 147px);
     padding: 0 42px;
     align-items: flex-start;
   }
@@ -56,6 +57,10 @@
     position: absolute;
     inset: -200px 0 0;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .boxOnboarding {
@@ -290,6 +295,7 @@
   align-items: center;
   padding: 100px 32px;
   background: #09090A;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 50px 42px;
@@ -381,6 +387,7 @@
 .sectionDepositions {
   padding: 100px 32px;
   gap: 100px;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 50px 42px;
@@ -437,6 +444,7 @@
 .sectionPrice {
   gap: 100px;
   padding: 60px 0;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 0 0 120px;
@@ -639,6 +647,7 @@
 
 .sectionSatisfation {
   padding: 100px 32px;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 30px 42px;
@@ -707,6 +716,7 @@
 .sectionModules {
   padding: 100px 32px;
   background: #09090A;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 42px;
@@ -757,6 +767,7 @@
 
 .sectionHistory {
   padding: 100px 42px;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 50px 42px;
@@ -831,6 +842,7 @@
 .sectionHelp {
   background: #09090A;
   padding: 100px 42px;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 50px 42px;
