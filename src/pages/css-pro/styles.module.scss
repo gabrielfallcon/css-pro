@@ -386,11 +386,14 @@
 
 .sectionDepositions {
   padding: 100px 32px;
-  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
   position: relative;
 
   @media (max-width: 768px) {
     padding: 50px 42px;
+    gap: 50px;
   }
   .contentDefault {
     @media (max-width: 768px) {
@@ -405,6 +408,12 @@
     }
   }
 
+  .contentDeposition {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
   .boxTextDeposition {
     width: 100%;
     max-width: 750px;
@@ -412,32 +421,36 @@
     flex-direction: column;
     text-align: left;
     gap: 20px;
+  }
+  .subtitleDepositions {
+    font-weight: 800;
+    font-size: 46px;
+    background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 
-    h2 {
-      font-weight: 800;
-      font-size: 46px;
-      background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-
-      @media (max-width: 768px) {
-        font-size: 24px;
-        line-height: 34px;
-      }
-    }
-
-    p {
-      font-size: 26px;
+    @media (max-width: 768px) {
+      font-size: 24px;
       line-height: 34px;
-      color: #E6E6E6;
-
-      @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 19px;
-      }
     }
+  }
+  .descriptionDepositions {
+    font-size: 26px;
+    line-height: 34px;
+    color: #E6E6E6;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .slider {
+    width: 100%;
+    display: flex;
+    gap: 40px;
   }
 }
 
@@ -727,9 +740,11 @@
     align-items: flex-start;
 
     .titleModules {
+      width: 100%;
+      max-width: 950px;
       font-weight: 700;
       font-size: 48px;
-      line-height: 45px;
+      line-height: 60px;
       background: linear-gradient(90deg, #00C2FF 0%, #00FF0A 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -743,6 +758,8 @@
       }
     }
     .description {
+      width: 100%;
+      max-width: 840px;
       font-size: 26px;
       line-height: 45px;
       color: #E6E6E6;
