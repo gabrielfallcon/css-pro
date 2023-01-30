@@ -8,11 +8,27 @@ import DropdownList from "../../components/Dropdown/dropList";
 import Footer from "../../components/Footer";
 import route from "next/router";
 import { Blur } from "../../components/Blur";
+import { Card } from "../../components/Card";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider, { Settings } from "react-slick";
 
 const CssPro = () => {
   const redirectPrice = () => {
     route.push('/css-pro#pricing');
   }
+
+  const settings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true
+  };
+
   return (
     <>
       <div className={styles.targ}>
@@ -240,17 +256,46 @@ const CssPro = () => {
           <img src="/images/cafe.svg" alt="cafe" />
 
           <div className={styles.boxTextDeposition}>
-            <h2>Tenho que ser sincero com você!</h2>
+            <h2 className={styles.subtitleDepositions}>Tenho que ser sincero com você!</h2>
 
-            <p>
+            <p className={styles.descriptionDepositions}>
               Sabendo CSS você vai conseguir 10x mais rápido passar em uma
               entrevista ou ser reconhecido por seus trabalhos…
             </p>
-            <p>
+            <p className={styles.descriptionDepositions}>
               Como você pode ver nesses depoimentos abaixo… O CSS está sendo o
               precursor no destacamento e esclarecedor em todos os sentidos.
             </p>
           </div>
+        </div>
+
+        <div className={clsx(styles.contentDefault, styles.contentDeposition)}>
+          <div className={styles.boxTextDeposition}>
+            <h2 className={styles.subtitleDepositions}>Depoimentos</h2>
+
+            <p className={styles.descriptionDepositions}>
+              Esses já fazem parte do CSS… o único apto para vaga…
+            </p>
+          </div>
+          <Slider className={styles.slider} {...settings}>
+            <Card 
+              img="/images/keverton.jpg"
+              name="Keverton Reis"
+              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
+            />
+            <Card 
+              img="/images/keverton.jpg"
+              name="Keverton Reis"
+              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
+            />
+            <Card 
+              img="/images/keverton.jpg"
+              name="Keverton Reis"
+              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
+            />
+           
+           
+          </Slider>
         </div>
 
         <Blur 
@@ -285,6 +330,82 @@ const CssPro = () => {
           color="blue"
           toRenderOnly="mobile"
         />
+      </section>
+
+      <section className={styles.sectionModules}>
+        <div className={styles.contentDefault}>
+          <h2 className={styles.titleModules}>
+            Esses já fazem parte do CSS... O ÚNICO APTO PARA A VAGA...
+          </h2>
+          <p className={styles.description}>
+            Eles se destacam por causa que encontraram dentro da metodologia <span>CSS PRO:</span>
+          </p>
+
+          <div className={styles.listDropdown}>
+            <DropdownModules 
+              title="Introdução HTML e CSS"
+              subtitle="Não importa se você não sabia de nada. Aqui você sairá sem nenhuma dúvida se quer."
+              description="Irei te mostrar os primeiros passos com HTML, no caso de você não ter conhecimento com HTML terá o mínimo de conheicmento para absorver o máximo do CSS."
+            />
+            <DropdownModules 
+              title="O mapa"
+              subtitle="Aqui iremos mostrar como iniciar uma estrutura de elemento de tela."
+              description="Uma das parte mais importantes de uma ótima estilização é de fato a estruturação de seu HTML, com isso conseguimos ter uma maior flexibilidade para criar sites responsivos, deixar nosso layout o mais fiel possivel ao layout garantindo uma grande expriência ao usuário final. Tudo se trata de experiência... Focar nos mínimos detalhes como esse é um dos pontos que te torna um dev com destaque!"
+            />
+            <DropdownModules 
+              title="As propriedades do CSS"
+              subtitle="Flexbox, Grid e entre outras que grandes desenvolvedores utilizam em Frontend."
+              description="Aqui passaremos pelas propriedades que iremos utilizar no CSS ao decorrer do curso, não vou te passar um wikpédia de informações, mas sim te passar todas as propriedades que você de fato vai utilizar todos os dias como desenvolvedor!"
+            />
+             <DropdownModules 
+              title="Medidas em CSS"
+              subtitle="Aqui falarei um pouco sobre todas as medidas que podemos utilizar com CSS e as dias diferenças e quando usar cada uma."
+              description="Precisamos entender como podemos dimenssionar nossos elementos em tela e tomar a decisão certo ao utilizar uma unidade de medida em CSS, nesse módulo você saberá para que serve as unidades de medidas e em que ocasiões utiliza-la."
+            />
+            <DropdownModules 
+              title="Cada vez VOCÊ está um passo à frente"
+              subtitle="Pseudo class em CSS e por que utilizá-los."
+              description="CSS além de suas animações... Conseguimos determinar algum evento para o nosso site após uma ação do usuário, seja em um botão, uma div etc.. Com este módulo você será capaz de controlar as ações do usuário e promover alguma experiência ao usuário após tal feito."
+            />
+            <DropdownModules 
+              title="A mágica"
+              subtitle="Animações em CSS."
+              description="Aqui veremos sobre transform e keyframes.. Como conseguimos controlar as animações dentro de nosso site, mudando elementos de posição, controlando seu percurso, de fato tendo tudo na palma de sua mão!"
+            />
+            <DropdownModules 
+              title="Responsividade em CSS"
+              subtitle="Aqui iremos explorar como é possivel flexibilizar um site para ser visivel atravéz de dispositivos móveis"
+              description="Não dá pra te falar que apenas um site fica bom se você desenvolve-lo para web, é necessário desenvolver para mobile também! Nesse módulo você aprenderá como tornar um site responsivo."
+            />
+            <DropdownModules 
+              title="Mãos a obra!"
+              subtitle="Aqui iremos juntar tudo que aprendemos nos módulos anteriores em projetos práticos, para você conseguir aprender de forma mais simples e rápida tudo o que diz a respeito do CSS."
+              description="Neste módulo criaremos projetos juntos para que você desenvolva sites incriveis com todos os recursos que aprendeu nos módulos anteriores."
+            />
+            <DropdownModules 
+              title="Insegurança!? Só se for para subir no palco para falar dos grandes projetos que VOCÊ fez."
+              subtitle="Você encontrará neste módulo desafios técnicos que o farão ser capaz de fazer qualquer com suas próprias mãos."
+              description="Não adianta... O domínio vem com a prática de se desafiar com coisas novas... Aqui não será diferente!"
+            />
+            <DropdownModules 
+              title="Guia para o sucesso"
+              subtitle="Te mostrarei como você pega tudo isso que te ensinei até aqui e transforme em uma arma secreta para que você tenha vantagens em ser reconhecido na sua empresa, na entrevista etc... "
+              description="Muitos desenvolvedores não dão a mínima ao CSS, o problema é que está deixando de aproveitar oportunidades que provavelmente se abriria... O CSS não faz tudo sózinho é importante você ter isso em mente. Mas com ele você já é visto de outra forma!"
+            />
+            <DropdownModules 
+              title="Comunidade no Discord"
+              subtitle="Faça parte da comunidade CSS Ninja para tirar dúvidas, networking e oportunidades no mercado!"
+              description="Em nossa comunidade você poderá criar network com nossos alunos, terá acesso a oportunidades de vagas para que você possa aplicar para entrevistas... Não fique de fora!"
+            />
+            <DropdownModules 
+              title="Não sou médico mas faço PLANTÃO"
+              subtitle="Aqui poderá tirar toda sua dúvida para você virar um NINJA DO CSS."
+              description="Dentro de nossa comunidade teremos um canal para tirar dúvidas online toda sexta-feira! você não será abandonado, eu estarei aqui para segurar na sua mão, meu sucesso é ver o seu!"
+            />
+
+            <Button onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
+          </div>
+        </div>
       </section>
 
       <section className={styles.sectionPrice} id="pricing">
@@ -353,10 +474,10 @@ const CssPro = () => {
 
               <div className={styles.boxPrice}>
                 <p>
-                  De <span className={styles.risc}> R$ 450,00</span> por apenas
+                  De <span className={styles.risc}> R$ 497,00</span> por apenas
                 </p>
                 <p>
-                  6x <span className={styles.price}>R$ 36,53</span>
+                  12x <span className={styles.price}>R$ 19,78</span>
                 </p>
               </div>
 

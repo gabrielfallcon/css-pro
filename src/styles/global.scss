@@ -69,3 +69,16 @@ input, textarea {
   border-radius: 15px;
 }
 
+.slick-slider {
+  .slick-list {
+    transform: none !important;
+    width: 100%;
+
+    .slick-track {
+      width: 100%;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+  }
+}
