@@ -10,6 +10,8 @@ import route from "next/router";
 import { Blur } from "../../components/Blur";
 import { Card } from "../../components/Card";
 
+import "slick-carousel/slick/slick.css";	
+import "slick-carousel/slick/slick-theme.css";
 
 import Slider, { Settings } from "react-slick";
 
@@ -19,12 +21,22 @@ const CssPro = () => {
   }
 
   const settings: Settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true
+    infinite: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
   };
 
   return (
@@ -275,24 +287,32 @@ const CssPro = () => {
               Esses já fazem parte do CSS… o único apto para vaga…
             </p>
           </div>
-          <Slider className={styles.slider} {...settings}>
+          <Slider {...settings}>
             <Card 
               img="/images/keverton.jpg"
               name="Keverton Reis"
               description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
             />
             <Card 
+              img="/images/guilherme.jpeg"
+              name="Guilherme Moreira"
+              description="O curso é incrível, didática boa e fácil de entender os conceitos básico de CSS, antes eu patinava e ficava 'chutando' os estilos, agora consigo saber com exatidão o que usar em cada situação. Recomendo muito."
+            />
+            <Card 
               img="/images/keverton.jpg"
-              name="Keverton Reis"
+              name="Kevin"
               description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
             />
             <Card 
               img="/images/keverton.jpg"
-              name="Keverton Reis"
+              name="Daniel"
               description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
             />
-           
-           
+             <Card 
+              img="/images/keverton.jpg"
+              name="Isabela"
+              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
+            />
           </Slider>
         </div>
 

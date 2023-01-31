@@ -70,15 +70,38 @@ input, textarea {
 }
 
 .slick-slider {
+  width: 100%;
+  max-width: 1430px;
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+
+
   .slick-list {
-    transform: none !important;
-    width: 100%;
+    width: 91%;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
 
     .slick-track {
-      width: 100%;
+      width: 100% !important;
       display: flex;
       gap: 40px;
-      align-items: flex-start;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        width: 320px !important;
+      }
+
+      .slick-slide {
+       
+        @media (max-width: 768px) {
+          width: 320px !important;
+        }
+      }
     }
   }
 }
