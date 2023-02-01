@@ -1,0 +1,29 @@
+.arrow {
+  width: 60px;
+  height: 60px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: #09090A;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -120px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    bottom: -65px;
+  }
+}
+
+.nextArrow {
+  transform: rotate(90deg);
+  right: 0;
+}
+
+
+.prevArrow {
+  transform: rotate(-90deg);
+  left: 0;
+}

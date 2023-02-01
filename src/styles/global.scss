@@ -23,20 +23,6 @@ body {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-
-    // &:has(footer) {
-    //   footer {
-    //     padding: 0 32px calc(120px + 55px);
-    //   }
-    // }
-  
-    // @media (max-width: 769px) {
-    //   &:has(footer) {
-    //     footer {
-    //       padding: 0 42px calc(120px + 55px);
-    //     }
-    //   }
-    // }
   }
 }
 input, textarea {
@@ -50,14 +36,6 @@ input, textarea {
   border-radius: 15px;
 }
  
-// ::-webkit-scrollbar-track      {
-//   background: #09090A;
-//   border-radius: 15px;
-// }
-// ::-webkit-scrollbar-track-piece{
-//   background: #09090A;
-//   border-radius: 15px;
-// }
 ::-webkit-scrollbar-thumb:vertical {
   background: linear-gradient(to top, #00C2FF 0%, #00FF0A 100%);
   border-radius: 15px;
@@ -74,7 +52,7 @@ input, textarea {
   max-width: 1430px;
 
   @media (max-width: 768px) {
-    max-width: 320px;
+    max-width: 292px;
   }
 
 
@@ -90,10 +68,10 @@ input, textarea {
       width: 100% !important;
       display: flex;
       gap: 40px;
-      justify-content: center;
-
+      
       @media (max-width: 768px) {
         width: 320px !important;
+        justify-content: center;
       }
 
       .slick-slide {
