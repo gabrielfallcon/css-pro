@@ -12,6 +12,7 @@ import { Card } from "../../components/Card";
 
 import Slider, { Settings } from "react-slick";
 import { Arrow } from "../../components/Arrow";
+import { Header } from "../../components/Header";
 
 const CssPro = () => {
   const redirectPrice = () => {
@@ -41,6 +42,7 @@ const CssPro = () => {
 
   return (
     <>
+      <Header isHomePage/>
       <div className={styles.targ}>
         <p>
           <span>URGENTE:</span> O único triplicador de salário de dev Frontend
@@ -754,7 +756,7 @@ const CssPro = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer isHomePage/>
     </>
   );
 };

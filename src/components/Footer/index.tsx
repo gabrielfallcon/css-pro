@@ -4,19 +4,25 @@ import router from 'next/router';
 import { FiChevronUp } from 'react-icons/fi';
 import clsx from 'clsx';
 
-const Footer = () => {
+interface FooterProps {
+  isHomePage?: boolean;
+}
+
+const Footer = ({ isHomePage }:  FooterProps) => {
   const onClickSocial = (url: string) => {
     router.push(url);
   }
   return (
     <footer className={styles.footer}>
 
-      <div className={styles.contentDefault}>
-        <img 
-          src="/images/logo-dev-ajuda.png" 
-          alt="logo" 
-          className={styles.imgFooter}  
-        />
+      <div className={clsx(styles.contentDefault,  isHomePage && styles.footerHome)}>
+        {isHomePage &&(
+          <img 
+            src="/images/logo-dev-ajuda.png" 
+            alt="logo" 
+            className={styles.imgFooter}  
+          />
+        )}
 
         <div className={styles.contentSocial}>
           <div className={styles.boxSocial}>
@@ -26,19 +32,23 @@ const Footer = () => {
             <FaYoutube size={27} color="#0D0F10"/>
           </div>
         </div>
+        
+        {isHomePage && (
+          <div className={styles.boxBackStart}>
+            <FiChevronUp size={28} color="#00FF0A"/>
 
-        <div className={styles.boxBackStart}>
+            <a href="#onboading">Voltar ao topo</a>
+          </div>
+        )}
+      </div>
+
+      {isHomePage && (
+        <div className={clsx(styles.boxBackStart, styles.contentMobile)}>
           <FiChevronUp size={28} color="#00FF0A"/>
 
           <a href="#onboading">Voltar ao topo</a>
         </div>
-      </div>
-
-      <div className={clsx(styles.boxBackStart, styles.contentMobile)}>
-        <FiChevronUp size={28} color="#00FF0A"/>
-
-        <a href="#onboading">Voltar ao topo</a>
-      </div>
+      )}
     </footer>
   )
 }

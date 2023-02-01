@@ -3,12 +3,16 @@
   max-width: 1430px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+.footerHome {
+  justify-content: space-between;
+}
 .footer {
   width: 100%;
+  height: 120px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,6 +23,7 @@
   @media (max-width: 768px) {
     gap: 42px;
     padding: 42px;
+    height: 82px;
   }
 
   &::after {
