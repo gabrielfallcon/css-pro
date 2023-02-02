@@ -54,9 +54,6 @@ const CssPro = () => {
       </div>
 
       <section className={styles.sectionOnboarding} id="onboading">
-        <div className={styles.animationOnboarding}>
-          <img src="/images/Capa-animation.svg" alt="" />
-        </div>
         <div className={styles.boxOnboarding}>
           <h2 className={styles.subtitle}>Inscrição</h2>
           <h1 className={styles.title}>
@@ -73,10 +70,34 @@ const CssPro = () => {
         </div>
 
         <Blur 
+          width="227px"
+          height="217px"
+          top="-50px"
+          left="-170px"
+          color="blue"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="273px"
+          height="261px"
+          top="-50px"
+          right="-217px"
+          color="blue"
+          toRenderOnly="desktop"
+        />
+        <Blur 
           width="229px"
           height="219px"
           bottom="0"
           right="-195px"
+          color="green"
+          toRenderOnly="desktop"
+        />
+        <Blur 
+          width="429px"
+          height="410px"
+          bottom="0"
+          left="-281px"
           color="green"
           toRenderOnly="desktop"
         />
