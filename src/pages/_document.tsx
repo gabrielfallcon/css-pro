@@ -32,7 +32,7 @@ export default function Document() {
         <meta name="author" content="CSS Pro" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>CSS-PRO - Curso de CSS para iniciantes</title>
+        <title>CSS PRO - Curso de CSS do básico ao avançado</title>
       </Head>
       <body>
         <Main />
