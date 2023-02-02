@@ -25,8 +25,14 @@ export default function Document() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <meta charSet="UTF-8"/>
+        <meta name="description" content="Aprenda CSS com os melhores profissionais da indústria. A CSS Pro oferece cursos completos e práticos para tornar você um especialista em CSS." />
+        <meta name="keywords" content="CSS, cursos, aprendizagem, desenvolvimento web, habilidades, profissionais" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="CSS Pro" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>CSS-PRO</title>
+        <title>CSS-PRO - Curso de CSS para iniciantes</title>
       </Head>
       <body>
         <Main />
