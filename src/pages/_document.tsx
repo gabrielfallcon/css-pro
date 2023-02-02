@@ -26,7 +26,7 @@ export default function Document() {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
         <meta charSet="UTF-8"/>
-        <meta name="description" content="Aprenda CSS com os melhores profissionais da indústria. A CSS Pro oferece cursos completos e práticos para tornar você um especialista em CSS." />
+        <meta name="description" content="Aprenda CSS com os melhores profissionais da indústria. O CSS Pro da DevAjuda oferece cursos completos e práticos para tornar você um especialista em CSS." />
         <meta name="keywords" content="CSS, cursos, aprendizagem, desenvolvimento web, habilidades, profissionais" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="CSS Pro" />
