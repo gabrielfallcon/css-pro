@@ -27,7 +27,7 @@ export default function Document() {
         />
         <meta charSet="UTF-8"/>
         <meta name="description" content="Aprenda CSS com os melhores profissionais da indústria. O CSS Pro da DevAjuda oferece cursos completos e práticos para tornar você um especialista em CSS." />
-        <meta name="keywords" content="CSS, cursos, aprendizagem, desenvolvimento web, habilidades, profissionais" />
+        <meta name="keywords" content="CSS, frontend, desenvolvimento web, CSS Pro, curso de CSS, DevAjuda, Dev Ajuda" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="CSS Pro" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
