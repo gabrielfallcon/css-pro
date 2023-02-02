@@ -783,3 +783,13 @@ const CssPro = () => {
 };
 
 export default CssPro;
+
+export async function getServerSideProps() {
+  const text = 'Seu texto aqui'
+
+  return {
+    props: {
+      text,
+    },
+  }
+}
