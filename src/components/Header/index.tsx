@@ -9,7 +9,7 @@ interface HeaderProps {
 export const Header = ({isHomePage}: HeaderProps) => {
   return (
     <header className={clsx(styles.header, isHomePage && styles.homePage)}>
-      <Image src="/images/logo-css-pro.png" alt="CSS Pro" width={206} height={46}/>
+      <Image src="/images/forma-front-logo.png" alt="CSS Pro" width={220} height={40}/>
       <Image src="/images/logo-dev-ajuda.png" alt="DevAjuda" width={189} height={79}/>
     </header>
   )

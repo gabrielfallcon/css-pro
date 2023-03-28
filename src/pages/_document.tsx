@@ -12,7 +12,7 @@ export default function Document() {
         />
         <link
           rel="shortcut icon"
-          href="/images/css-logo.png"
+          href="/images/forma-front.png"
           type="image/x-icon"
         />
         <link
@@ -26,13 +26,13 @@ export default function Document() {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
         <meta charSet="UTF-8"/>
-        <meta name="description" content="Desenvolva seu maior potencial e seja destaque em sua empresa com o pontencializador CSS 3x" />
-        <meta name="keywords" content="CSS, frontend, desenvolvimento web, CSS Pro, curso de CSS, DevAjuda, Dev Ajuda" />
+        <meta name="description" content="Desenvolva seu maior potencial com o Forma Front e torne-se um dev de destaque!" />
+        <meta name="keywords" content="CSS, frontend, desenvolvimento web, Forma Front, curso de CSS, DevAjuda, Dev Ajuda" />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="CSS Pro" />
+        <meta name="author" content="Forma Front" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>CSS PRO - Curso de CSS do básico ao avançado</title>
+        <title>Forma Front - Curso de front-end para iniciantes</title>
       </Head>
       <body>
         <Main />

@@ -3,7 +3,7 @@ import { Button } from "../../components/Button";
 import { FiCheck } from "react-icons/fi";
 
 import styles from "./styles.module.scss";
-import DropdownModules from "../../components/Dropdown/dropModules";
+import CardModule from "../../components/Dropdown/cardModules";
 import DropdownList from "../../components/Dropdown/dropList";
 import Footer from "../../components/Footer";
 import route from "next/router";
@@ -45,11 +45,7 @@ const CssPro = () => {
       <Header isHomePage/>
       <div className={styles.targ}>
         <p>
-          <span>URGENTE:</span> O único triplicador de salário de dev Frontend
-          que poucos grupos seletos de pessoas dominam corretamente, e você pode
-          fazer parte desse grupo. Sem precisar… Pós graduação ou qualquer curso
-          de longo tempo. Eu chamo de:{" "}
-          <strong>CSS… O único apto para a vaga.</strong>
+          <span>URGENTE: </span> Diversos relatos de pessoas que estão migrando de suas áreas atuais para dev frontend e iniciantes estão de olho nos salários triplicados no começo de suas carreiras.
         </p>
       </div>
 
@@ -57,15 +53,13 @@ const CssPro = () => {
         <div className={styles.boxOnboarding}>
           <h2 className={styles.subtitle}>Inscrição</h2>
           <h1 className={styles.title}>
-            <span>Curso CSS PRO</span>
+            <span>Curso Forma Front</span>
             <br />O único apto para a vaga
           </h1>
           <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
 
           <span className={styles.spanObs}>
-            Obs: O profissional precisará de conhecimento básico de lógica de
-            programação para ter 10x a maior chance de conseguir qualquer vaga
-            se…Dominar a simplicidade do CSS
+            Obs: voce terá as ferramentas certa para ter um salário de 3k a 6k/mês
           </span>
         </div>
 
@@ -111,6 +105,39 @@ const CssPro = () => {
         />
       </section>
 
+      <section className={styles.sectionSalary}>
+        <div className={clsx(styles.contentDefault, styles.contentSalary)}>
+          <img src="/images/salary.png" alt="Salarys" />
+
+          <div className={styles.boxText}>
+            <span>Urgente</span>
+            <h2 className={styles.subtitleDepositions}>
+              Diversos relatos de pessoas que estão migrando de suas áreas atuais para dev frontend e iniciantes estão de olho nos salários triplicados no começo de suas carreiras.
+            </h2>
+
+            <p className={styles.descriptionDepositions}>
+              Esses relatos estão acontecendo por causa da facilidade de entrada na área de Dev Frontend… Sem precisar de faculdade!
+            </p>
+
+            <strong>
+              Você quer ganhar de 3.000 a 5.000 Reais COMO DEV FRONTEND?
+            </strong>
+
+            <p>
+              Tudo isso sem precisar pagar mensalmente um valor fixo igual uma faculdade e com sua duração de 2 á 4 anos…
+            </p>
+
+            <p>
+              Com apenas um curso digital com um único valor muito abaixo, e com duração de 3 meses você já estará apto, para mudar de carreira ou para você iniciante triplicar seu salário. 
+            </p>
+
+            <p>
+              Esse Jovem abaixo é apenas um dos relatos que você pode ver…  
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.sectionMessageCase}>
         <img
           src="/images/faixa.svg"
@@ -153,20 +180,20 @@ const CssPro = () => {
           <p>
             Foram os 3 anos mais difíceis da vida desse jovem… Até que esse
             jovem ganhou uma bolsa de um curso de frontend… Foi onde tudo mudou…
-            Desde então ele dominou o TEMIDO CSS.
+            Desde então ele se aperfeiçoou em HTML CSS e JS.
           </p>
 
           <p>
-            Antes de ter compreendido a real importância do CSS e seu peso nas
+            Antes de ter compreendido a real importância do HTML, CSS e JS e seu peso nas
             horas das entrevistas, ele foi recusado em diversas que fez… De 50
             entrevistas que ele fez, 49 ele foi recusado.
           </p>
 
           <p>
-            Até que… Um certo dia em uma entrevista já sabendo usar o CSS a seu
+            Até que… Um certo dia em uma entrevista já sabendo utilizar as stacks a seu
             favor com uma linguagem de javascript simples, e a linha mestre dele
             ser reprovado ou recrutado foi trabalhar bem e de forma simples o
-            CSS…
+            HTML, CSS e JS com alguns extras!…
           </p>
 
           <p>
@@ -176,7 +203,7 @@ const CssPro = () => {
 
           <p>E esse jovem sou eu: Gabriel da Silva Nascimento</p>
 
-          <p>O criador CSS PRO…</p>
+          <p>O criador Forma Front…</p>
 
           <p>
             Eu vivi essa experiência… Sabe o porque eu disse tudo isso a você?
@@ -184,49 +211,11 @@ const CssPro = () => {
 
           <p>
             Porque, eu queria que VOCÊ soubesse que tudo isso só aconteceu por
-            saber dominar o CSS de forma simples e prática e que me fez criar
+            saber utilizar HTML, CSS e JS de forma simples e prática e que me fez criar
             oportunidades que me fez destacar dos outros concorrentes…
           </p>
 
           <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
-        </div>
-
-        <div className={styles.exposedCSS}>
-          <h2>
-            Dominar o CSS ao seu favor é mais simples do que você pensa…
-            Explico!
-          </h2>
-
-          <div className={styles.exposedCSSDescriptionBox}>
-            <span className={styles.exposedCSSDescription}>
-              Como você e eu já sabemos que, ser programador é saber codificar…
-              Isso é a base de todos dev Frontend.
-            </span>
-
-            <span className={styles.exposedCSSDescription}>
-              PORÉM, DOIS FATORES FARÃO VOCÊ MUDAR DE PERCEPÇÃO. E JÁ TE DARÃO
-              UMA DIREÇÃO AONDE IR…
-            </span>
-          </div>
-
-          <div className={styles.boxTag}>
-            <div className={styles.tag}>
-              <strong>Saber codificar. </strong>Sem novidades por aqui…
-            </div>
-
-            <div className={styles.tag}>
-              <strong>Saber usar CSS </strong>para se vender nas entrevistas e
-              vender
-            </div>
-
-            <img src="/images/arrowDownLeft.png" alt="" className={clsx(styles.imgArrowTag, styles.arrowLeft)} />
-            <img src="/images/arrowDownRight.png" alt="" className={clsx(styles.imgArrowTag, styles.arrowRight)} />
-          </div>
-
-          <span className={styles.exposedCSSDescription}>
-            PS: SE VOCÊ É DEV FRONTEND O PRIMEIRO FATOR NÃO SERÁ UM PROBLEMA PRA
-            VOCÊ.
-          </span>
         </div>
 
         <Blur 
@@ -247,82 +236,47 @@ const CssPro = () => {
         />
       </section>
 
-      <section className={clsx(styles.sectionInsight, styles.sectionDefault)}>
-        <div className={styles.contentDefault}>
-          <div className={styles.boxTextInsight}>
-            <img
-              src="/images/circulo.svg"
-              alt=""
-              className={styles.imageInsight}
-            />
-            <h2>
-              Olhe para esta página <br />
-              que você está agora… <br />
-              <span>O Que você vê???</span>
-            </h2>
-          </div>
+      <section className={styles.sectionStacks}>
+        <div className={clsx(styles.contentDefault, styles.contentStacks)}>
+          <img src="/images/stack.png" alt="Stacks" />
 
-          <div className={styles.boxDescriptionInsight}>
-            <p>Certamente você não está vendo códigos de programação…</p>
+          <div className={styles.boxText}>
             <p>
-              E sim uma beleza que atrai olhares das pessoas… Esse é o clímax de
-              um dev Frontend e que toda empresa procura para repassar pro
-              cliente final.
-            </p>
-            <p>
-              É sobre isso! <span>Experiência…</span> E isso se faz com CSS de
-              forma simples, prática e rápida.
-            </p>
-            <p>Porém…</p>
-            <p>
-              Muitos dev Frontend não dão importância para o CSS e têm a
-              necessidade de voltar para dominar se querem algum destaque… E
-              para os iniciantes parece algo de 7 cabeças de se aprender, mas o
-              fato é que o CSS é mais simples do que você possa imaginar a com
-              didática correta.
+              Você, iniciante com em HTML, CSS, JS e Git, ou você que não sabe nada dessas linguagens...
             </p>
 
-            <Button onClick={redirectPrice}>QUERO TRIPLICAR MEU SALÁRIO</Button>
+            <h2>Você conseguirá triplicar seu salário</h2>
+
+            <p>
+              Dev Frontend é a única profissão que te dá a oportunidade de mudar de área sem comprometer sua renda todos os meses igual uma faculdade.
+            </p>
+
+            <p>
+              Essas ferramentas, HTML, CSS, JS e Git, são a chave para você trocar de profissão ou triplicar o seu salário.
+            </p>
           </div>
         </div>
       </section>
 
       <section className={styles.sectionDepositions}>
-        <div className={styles.contentDefault}>
-          <img src="/images/cafe.svg" alt="cafe" />
-
-          <div className={styles.boxTextDeposition}>
-            <h2 className={styles.subtitleDepositions}>Tenho que ser sincero com você!</h2>
-
-            <p className={styles.descriptionDepositions}>
-              Sabendo CSS você vai conseguir 10x mais rápido passar em uma
-              entrevista ou ser reconhecido por seus trabalhos…
-            </p>
-            <p className={styles.descriptionDepositions}>
-              Como você pode ver nesses depoimentos abaixo… O CSS está sendo o
-              precursor no destacamento e esclarecedor em todos os sentidos.
-            </p>
-          </div>
-        </div>
-
         <div className={clsx(styles.contentDefault, styles.contentDeposition)}>
           <div className={styles.boxTextDeposition}>
             <h2 className={styles.subtitleDepositions}>Depoimentos</h2>
 
             <p className={styles.descriptionDepositions}>
-              Esses já fazem parte do CSS… o único apto para vaga…
+              Esses já fazem parte do Forma Front o único apto para vaga…
             </p>
           </div>
           <Slider {...settings}>
             <Card 
               img="/images/keverton.jpg"
               name="Keverton Reis"
-              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o CSS PRO!"
+              description=" Sou aluno da turma inicial do projeto de capacitação do Gabriel, pude aprender de forma simples e objetiva sobre o CSS e como funciona, suas particularidades e como utiliza-lo da melhor maneira. Isso tudo em poucas aulas, imagina com o Forma Front!"
             />
             <Card 
               img="/images/guilherme.jpeg"
               name="Guilherme Moreira"
-              description="O curso é incrível, didática boa e fácil de entender os conceitos básico de CSS, antes eu patinava e ficava 'chutando' os estilos, agora consigo saber com exatidão o que usar em cada situação. Recomendo muito."
+              description="O curso é incrível, didática boa e fácil de entender os conceitos básico de front-end, antes eu patinava e ficava 'chutando', agora consigo saber com exatidão o que usar em cada situação. Recomendo muito."
             />
             <Card 
               img="/images/daniel.png"
@@ -379,73 +333,56 @@ const CssPro = () => {
       <section className={styles.sectionModules}>
         <div className={styles.contentDefault}>
           <p className={styles.description}>
-            Eles se destacam por causa que encontraram dentro da metodologia <span>CSS PRO:</span>
+            Eles se destacam por causa que encontraram dentro da metodologia <span>Forma Front:</span>
           </p>
 
-          <div className={styles.listDropdown}>
-            <DropdownModules 
-              title="Introdução HTML e CSS"
-              subtitle="Não importa se você não sabia de nada. Aqui você sairá sem nenhuma dúvida se quer."
-              description="Irei te mostrar os primeiros passos com HTML, no caso de você não ter conhecimento com HTML terá o mínimo de conheicmento para absorver o máximo do CSS."
+          <div className={styles.listCards}>
+            <CardModule 
+              srcImg="/images/html.png"
+              title="HTML do básico ao avançado"
+              description="Neste módulo, você irá aprender como criar tabelas, formulários e estilos em HTML, além disso, poderá criar páginas da web visualmente atraentes e interativas que vão impressionar seus visitantes!"
             />
-            <DropdownModules 
-              title="O mapa"
-              subtitle="Aqui iremos mostrar como iniciar uma estrutura de elemento de tela."
-              description="Uma das parte mais importantes de uma ótima estilização é de fato a estruturação de seu HTML, com isso conseguimos ter uma maior flexibilidade para criar sites responsivos, deixar nosso layout o mais fiel possivel ao layout garantindo uma grande expriência ao usuário final. Tudo se trata de experiência... Focar nos mínimos detalhes como esse é um dos pontos que te torna um dev com destaque!"
+            <CardModule 
+              srcImg="/images/css.png"
+              title="CSS do básico ao avançado"
+              description="Aqui você aprenderá a estilizar seu site com propriedades, Flexbox, Grid, Pseudo class, animações e responsividade.  
+              Com isso, você será capaz de criar designs impressionantes e responsivos para o seu site."
             />
-            <DropdownModules 
-              title="As propriedades do CSS"
-              subtitle="Flexbox, Grid e entre outras que grandes desenvolvedores utilizam em Frontend."
-              description="Aqui passaremos pelas propriedades que iremos utilizar no CSS ao decorrer do curso, não vou te passar um wikpédia de informações, mas sim te passar todas as propriedades que você de fato vai utilizar todos os dias como desenvolvedor!"
+            <CardModule 
+              srcImg="/images/gitgithub.png"
+              title="Git e Github"
+              isImgSize
+              description="Neste módulo, você aprenderá a trabalhar com o sistema de controle de versão mais popular do mundo. Poderá gerenciar seu código de forma eficiente, colaborar com outros desenvolvedores e controlar diferentes versões do seu projeto."
             />
-             <DropdownModules 
-              title="Medidas em CSS"
-              subtitle="Aqui falarei um pouco sobre todas as medidas que podemos utilizar com CSS e as dias diferenças e quando usar cada uma."
-              description="Precisamos entender como podemos dimenssionar nossos elementos em tela e tomar a decisão certo ao utilizar uma unidade de medida em CSS, nesse módulo você saberá para que serve as unidades de medidas e em que ocasiões utiliza-la."
+            <CardModule 
+              srcImg="/images/js.png"
+              title="Javascript Básico ao intermediário"
+              description="Neste curso, você aprenderá as estruturas fundamentais da linguagem, como condicionais, loops, funções, escopo, arrays e objetos, aprenderá a trabalhar com eventos e manipulação do DOM, AJAX e interação com APIs."
             />
-            <DropdownModules 
-              title="Cada vez VOCÊ está um passo à frente"
-              subtitle="Pseudo class em CSS e por que utilizá-los."
-              description="CSS além de suas animações... Conseguimos determinar algum evento para o nosso site após uma ação do usuário, seja em um botão, uma div etc.. Com este módulo você será capaz de controlar as ações do usuário e promover alguma experiência ao usuário após tal feito."
+            <CardModule 
+              srcImg="/images/criandoProjeto.png"
+              title="Criação de Projetos"
+              description="Precisamos colocar em prática o que aprendemos no passo a passo, e para isso temos um modulo para criarmos projetos e emfim fazer a mágica acontecer, serão vários projetos para que você tenha uma visão de como é o dia a dia de um desenvolvedor Front-end."
             />
-            <DropdownModules 
-              title="A mágica"
-              subtitle="Animações em CSS."
-              description="Aqui veremos sobre transform e keyframes.. Como conseguimos controlar as animações dentro de nosso site, mudando elementos de posição, controlando seu percurso, de fato tendo tudo na palma de sua mão!"
+            <CardModule 
+              srcImg="/images/desafios.png"
+              title="Desafios técnicos"
+              description="Para que você extraia o melhor do curso, você precisa de desafios para aprimorar todo conheicmento aprendido e de fato ter uma experiencia de desafio, isso te tornará mais eficaz em seus projetos."
             />
-            <DropdownModules 
-              title="Responsividade em CSS"
-              subtitle="Aqui iremos explorar como é possivel flexibilizar um site para ser visivel atravéz de dispositivos móveis"
-              description="Não dá pra te falar que apenas um site fica bom se você desenvolve-lo para web, é necessário desenvolver para mobile também! Nesse módulo você aprenderá como tornar um site responsivo."
-            />
-            <DropdownModules 
-              title="Mãos a obra!"
-              subtitle="Aqui iremos juntar tudo que aprendemos nos módulos anteriores em projetos práticos, para você conseguir aprender de forma mais simples e rápida tudo o que diz a respeito do CSS."
-              description="Neste módulo criaremos projetos juntos para que você desenvolva sites incriveis com todos os recursos que aprendeu nos módulos anteriores."
-            />
-            <DropdownModules 
-              title="Insegurança!? Só se for para subir no palco para falar dos grandes projetos que VOCÊ fez."
-              subtitle="Você encontrará neste módulo desafios técnicos que o farão ser capaz de fazer qualquer com suas próprias mãos."
-              description="Não adianta... O domínio vem com a prática de se desafiar com coisas novas... Aqui não será diferente!"
-            />
-            <DropdownModules 
+            <CardModule 
+              srcImg="/images/guiaSucesso.png"
               title="Guia para o sucesso"
-              subtitle="Te mostrarei como você pega tudo isso que te ensinei até aqui e transforme em uma arma secreta para que você tenha vantagens em ser reconhecido na sua empresa, na entrevista etc... "
-              description="Muitos desenvolvedores não dão a mínima ao CSS, o problema é que está deixando de aproveitar oportunidades que provavelmente se abriria... O CSS não faz tudo sózinho é importante você ter isso em mente. Mas com ele você já é visto de outra forma!"
+              description="A pior coisa é você ter munição e não saber como atirar! E pra isso esse módulo te ajudará em vender seus projetos, dicas de como conseguir a primeira oportunidade, como criar networking para aumentar seu valor de mercado e muito mais."
             />
-            <DropdownModules 
-              title="Comunidade no Discord"
-              subtitle="Faça parte da comunidade CSS Ninja para tirar dúvidas, networking e oportunidades no mercado!"
+            <CardModule 
+              srcImg="/images/comunidade.png"
+              title="Comunidade no discord"
               description="Em nossa comunidade você poderá criar network com nossos alunos, terá acesso a oportunidades de vagas para que você possa aplicar para entrevistas... Não fique de fora!"
             />
-            <DropdownModules 
-              title="Não sou médico mas faço PLANTÃO"
-              subtitle="Aqui poderá tirar toda sua dúvida para você virar um NINJA DO CSS."
-              description="Dentro de nossa comunidade teremos um canal para tirar dúvidas online toda sexta-feira! você não será abandonado, eu estarei aqui para segurar na sua mão, meu sucesso é ver o seu!"
-            />
 
-            <Button onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
           </div>
+
+          <Button  onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
         </div>
       </section>
 
@@ -457,7 +394,7 @@ const CssPro = () => {
           </p>
           <p>
             Apenas um valor único para você usar o resto da sua vida. Sem
-            preocupação se você vai ou não conseguir um emprego. Com CSS PRO
+            preocupação se você vai ou não conseguir um emprego. Com Forma Front
             você garante sua vaga… Ou destaque.
           </p>
 
@@ -468,7 +405,7 @@ const CssPro = () => {
 
           <ul className={styles.listCredit}>
             <li>
-              <FiCheck color="#05FF00" /> <span>Com o auxílio do CSS PRO</span>
+              <FiCheck color="#05FF00" /> <span>Com o auxílio do Forma Front</span>
             </li>
             <li>
               <FiCheck color="#05FF00" /> <span>ZERO insegurança</span>
@@ -487,7 +424,7 @@ const CssPro = () => {
               </p>
               <p>
                 Apenas um valor único para você usar o resto da sua vida. Sem
-                preocupação se você vai ou não conseguir um emprego. Com CSS PRO
+                preocupação se você vai ou não conseguir um emprego. Com Forma Front
                 você garante sua vaga… Ou destaque.
               </p>
 
@@ -499,7 +436,7 @@ const CssPro = () => {
               <ul className={styles.listCredit}>
                 <li>
                   <FiCheck color="#05FF00" />{" "}
-                  <span>Com o auxílio do CSS PRO</span>
+                  <span>Com o auxílio do Forma Front</span>
                 </li>
                 <li>
                   <FiCheck color="#05FF00" /> <span>ZERO insegurança</span>
@@ -511,14 +448,14 @@ const CssPro = () => {
             </div>
 
             <div className={styles.contentPrice}>
-              <img src="/images/logo-css-pro.png" alt="Logo" />
+              <img src="/images/forma-front-logo.png" alt="Logo" />
 
               <div className={styles.boxPrice}>
                 <p>
                   De <span className={styles.risc}> R$ 497,00</span> por apenas
                 </p>
                 <p>
-                  12x <span className={styles.price}>R$ 19,78</span>
+                  12x <span className={styles.price}>R$ 14,76</span>
                 </p>
               </div>
 
@@ -595,70 +532,46 @@ const CssPro = () => {
             Mas, preciso lembrá-lo de que…
           </h2>
           <p className={styles.description}>
-            Você terá 9 módulos completos + Comunidade no discord + suporte ao vivo que mostrará literalmente o passo á
-            passo do CSS:
+            Você terá 7 módulos completos + Comunidade no discord que mostrará literalmente o passo á
+            passo da carreira de Front-end:
           </p>
 
-          <div className={styles.listDropdown}>
-            <ul className={styles.listModules}>
-              <li>
-                <div>
-                  <img src="/images/introHTMLCSS.png" alt="" />
-                  Introdução HTML e CSS
-                </div>
-                <div>
-                  <img src="/images/medidasCSS.png" alt="" />
-                  Medidas em CSS
-                </div>
-                <div>
-                  <img src="/images/responsive.png" alt="" />
-                  Responsividade em CSS
-                </div>
-                <div>
-                  <img src="/images/guiaSucesso.png" alt="" />
-                  Guia para o sucesso
-                </div>
-              </li>
-              <li>
-               <div>
-                  <img src="/images/estruturacao.png" alt="" />
-                  Estruturação HTML
-                </div>
-                <div>
-                  <img src="/images/pseudoClass.png" alt="" />
-                  Pseudo Class em CSS
-                </div>
-                <div>
-                  <img src="/images/criandoProjeto.png" alt="" />
-                  Criando Projetos
-                </div>
-                <div>
-                  <img src="/images/comunidade.png" alt="" />
-                  Comunidade no Discord
-                </div>
-              </li>
-              <li>
-               <div>
-                  <img src="/images/props.png" alt="" />
-                  Props em CSS
-                </div>
-                <div>
-                  <img src="/images/animacoes.png" alt="" />
-                  Animações em CSS
-                </div>
-                <div>
-                  <img src="/images/desafios.png" alt="" />
-                  Desafios técnicos
-                </div>
-                <div>
-                  <img src="/images/suporte.png" alt="" />
-                  Suporte Ao vivo!
-                </div>
-              </li>
-            </ul>
+          <ul className={styles.listModules}>
+            <li>
+              <img src="/images/html.png" alt="module" />
+              <span>HTML do básico ao avançado</span> 
+            </li>
+            <li>
+              <img src="/images/css.png" alt="module" />
+              <span>CSS do básico ao avançado</span>
+            </li>
+            <li>
+              <img src="/images/js.png" alt="module" />
+              <span>Javascript Básico ao intermediário</span>
+            </li>
+            <li>
+              <img src="/images/gitgithub.png" className={styles.imgGit} alt="module" />
+              <span>Git e Github</span>
+            </li>
+            <li>
+              <img src="/images/criandoProjeto.png" alt="module" />
+              <span>Criação de Projetos</span>
+            </li>
+            <li>
+              <img src="/images/desafios.png" alt="module" />
+              <span>Desafios técnicos</span>
+            </li>
+            <li>
+              <img src="/images/guiaSucesso.png" alt="module" />
+              <span>Guia para o sucesso</span>
+            </li>
+            <li>
+              <img src="/images/comunidade.png" alt="" />
+              <span>Comunidade no discord</span>
+            </li>
+          </ul>
 
-            <Button onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
-          </div>
+          <Button onClick={redirectPrice}>QUERO TER ACESSO AGORA</Button>
         </div>
       </section>
 
@@ -670,11 +583,11 @@ const CssPro = () => {
             <h2>Você lembra da história do jovem?</h2>
 
             <p>
-              Eu só pude falar para meus pais que tripliquei o salário por saber dominar a simplicidade do CSS ao meu favor…
+              Eu só pude falar para meus pais que tripliquei o salário por saber dominar a simplicidade do HTML, CSS e JS ao meu favor…
             </p>
 
             <p>
-              Se não fosse isso… Certamente eu seria reprovado novamente na entrevista de 50/50. Falando melhor seria reprovado em todas que fiz. Não por não saber dev Frontend mas sim por não dominar bem CSS e ser fiel a um layout.
+              Se não fosse isso… Certamente eu seria reprovado novamente na entrevista de 50/50. Falando melhor seria reprovado em todas que fiz. Não por não saber dev Frontend mas sim por não dominar bem HTML CSS e JS e ser fiel a um layout.
             </p>
 
             <strong>
@@ -682,7 +595,7 @@ const CssPro = () => {
             </strong>
 
             <p>
-              NOME: <strong className={styles.bolder}>CSS PRO</strong>
+              NOME: <strong className={styles.bolder}>Forma Front</strong>
             </p>
 
             <p>
@@ -729,7 +642,7 @@ const CssPro = () => {
           <div className={styles.listDropdownHelp}>
             <DropdownList 
               title="Esse método funciona para mim?" 
-              description="R: Sim. CSS PRO já foi testado e comprovado não somente por mim mesmo, que tripliquei o meu salário e sim por alunos que testaram e seguiram cada passo simples que antes eram totalmente complexos."
+              description="R: Sim. Forma Front já foi testado e comprovado não somente por mim mesmo, que tripliquei o meu salário e sim por alunos que testaram e seguiram cada passo simples que antes eram totalmente complexos."
             />
             <div className={styles.separate} />
 
@@ -741,7 +654,7 @@ const CssPro = () => {
             <div className={styles.separate} />
             <DropdownList 
               title="Como será entregue o produto?" 
-              description="R: O produto será 100% online para você ter a maior compreensão de cada módulo, se você tiver dúvidas poderá rever as aulas novamente quando quiser. Além disso teremos os nossos plantões ao vivo."
+              description="R: O produto será 100% online para você ter a maior compreensão de cada módulo, se você tiver dúvidas poderá rever as aulas novamente quando quiser."
             />
             <div className={styles.separate} />
 
@@ -771,7 +684,7 @@ const CssPro = () => {
 
             <DropdownList 
               title="Por quanto tempo eu terei acesso ao produto?" 
-              description="R: Terá acesso vitalício e as gravações dos plantões. Caso tenha dúvidas sobre algo que foi dito nos plantões poderá rever quantas vezes você quiser."
+              description="R: Terá acesso vitalício."
             />
           </div>
         </div>
